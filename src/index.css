@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-plus-jakarta: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-plus-jakarta);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom button styles */
+.btn {
+  @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-sm transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply btn bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500;
+}
+
+.btn-secondary {
+  @apply btn bg-white text-gray-700 border-gray-300 hover:bg-gray-50 focus:ring-indigo-500;
+}
+
+.btn-danger {
+  @apply btn bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg sm:rounded-xl shadow-sm border border-gray-100;
+}
+
+/* Input styles */
+.input {
+  @apply block w-full rounded-md sm:rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm;
+}
+
+/* Table styles */
+.table-container {
+  @apply bg-white shadow-sm rounded-lg sm:rounded-xl overflow-hidden border border-gray-100;
+}
+
+/* Status badge styles */
+.status-badge {
+  @apply inline-flex items-center px-2 sm:px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.status-badge-success {
+  @apply status-badge bg-green-100 text-green-800;
+}
+
+.status-badge-warning {
+  @apply status-badge bg-yellow-100 text-yellow-800;
+}
+
+.status-badge-error {
+  @apply status-badge bg-red-100 text-red-800;
+}
+
+/* Mobile dock styles */
+@media (max-width: 768px) {
+  .mobile-dock-gradient {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+  }
+  
+  .dock-item-active {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dock-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dock-item:hover {
+    transform: translateY(-2px);
+  }
+  
+  .submenu-backdrop {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .submenu-enter {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  
+  .submenu-enter-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .submenu-exit {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+  .submenu-exit-active {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Ensure content doesn't get hidden behind dock */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
