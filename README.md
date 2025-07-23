@@ -62,7 +62,7 @@ O TrackFlux oferece uma variedade de módulos para cobrir diversas áreas da ges
 
 <img width="791" height="749" alt="Captura de tela 2025-07-23 142314" src="https://github.com/user-attachments/assets/3ca7dcbb-4737-402d-9153-4a624b3f8548" />
 
-* **Seleção de Ambiente de Banco de Dados:** Permite alternar entre ambientes de produção e teste (Reforpan/Teste).
+* **Seleção de Ambiente de Banco de Dados:** Permite alternar entre ambientes de produção e teste.
 
 <img width="575" height="809" alt="Captura de tela 2025-07-23 142427" src="https://github.com/user-attachments/assets/a925de8b-7b6e-4f21-94d3-a4236c1f215a" />
 
